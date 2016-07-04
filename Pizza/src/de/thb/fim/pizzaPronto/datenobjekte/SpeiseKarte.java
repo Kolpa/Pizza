@@ -11,6 +11,10 @@ public class SpeiseKarte {
         initSpeisekarte();
     }
 
+    public SpeiseKarte(ArrayList<GerichtVO> speisen) {
+        this.speisen = new ArrayList<GerichtVO>(speisen);
+    }
+
     public SpeiseKarte(LinkedList<GerichtVO> speisen) {
         this.speisen = new ArrayList<GerichtVO>(speisen);
     }
@@ -62,6 +66,10 @@ public class SpeiseKarte {
         if (n >= 0 && n <= speisen.size())
             return speisen.get(n);
         return null;
+    }
+
+    public int getAnzGerichte() {
+        return speisen.size();
     }
 
     @Override

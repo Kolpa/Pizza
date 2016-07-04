@@ -45,6 +45,10 @@ public class Bestellung implements Serializable {
         return warenkorb.size();
     }
 
+    public LinkedList<GerichtVO> getWarenkorb() {
+        return warenkorb;
+    }
+
     public float berechneGesamtPreis() {
         float gesamtpreis = 0;
         for (GerichtVO position : warenkorb) {
